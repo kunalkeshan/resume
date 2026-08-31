@@ -8,7 +8,7 @@
 - **LinkedIn:** linkedin.com/in/kunalkeshan
 - **GitHub:** github.com/kunalkeshan
 - **Portfolio:** kunalkeshan.dev
-- **Location:** Chennai, Tamil Nadu, India
+- **Location:** Chennai, India
 
 ## Positioning Summary
 
@@ -51,7 +51,7 @@ Software engineer with a full-stack, infrastructure-leaning skill set: comfortab
 ## Experience
 
 ### StejasSYS
-**Chennai, Tamil Nadu, India**
+**Chennai, India (remote)**
 
 Multi-vertical technology partner running product/infra work across hospitality, food & beverage, wellness, and ride-hailing clients, with operations in Atlanta, Ottawa, and Chennai. Kunal has held two sequential roles here (part-time to full-time conversion).
 
@@ -90,7 +90,7 @@ Multi-vertical technology partner running product/infra work across hospitality,
 
 ### Flookup Capital Advisors (One21.ai)
 **Contract Software Engineer** | Sep 2023 - Present
-**Mumbai, Maharashtra, India (remote)**
+**Mumbai, India (remote)**
 
 - Built and deployed custom websites and web apps for finance & tech clients, primarily Chartered Accountant-related services, under the One21.ai product umbrella.
 - Led the transition from no-code platforms (e.g., Webflow ~$14/month) to custom Next.js deployments on Vercel, meaningfully cutting recurring hosting costs.
@@ -109,7 +109,7 @@ Multi-vertical technology partner running product/infra work across hospitality,
 
 ### LingoScriptAI
 **Product Development Engineer** | Jul 2023 - Mar 2024
-**Chennai, Tamil Nadu, India**
+**Chennai, India (remote)**
 
 - Led development on a content-creation tool, working the full Agile cycle from research and development through deployment.
 - Built the web application using TypeScript, Next.js, Tailwind CSS, Auth0, Node.js, and Express.js.
@@ -120,7 +120,7 @@ Multi-vertical technology partner running product/infra work across hospitality,
 
 ### Sundar Clinic
 **Full-stack Developer** | Apr 2023 - Sep 2023
-**Chennai, Tamil Nadu, India**
+**Chennai, India**
 
 - Built the clinic's responsive website from scratch, establishing its first proper online presence.
 - Integrated Sanity CMS so clinic staff could update site content independently, without developer involvement.
@@ -131,7 +131,7 @@ Multi-vertical technology partner running product/infra work across hospitality,
 
 ### SRM University
 **Project Assistant** | Nov 2022 - Mar 2023
-**Chennai, Tamil Nadu, India**
+**Chennai, India**
 
 - Built a custom user interface (React, TypeScript, Axios) for a neural network model running on PYNQ Z-Series hardware, improving accessibility and interaction with the model.
 - Collaborated with hardware engineers and medical professionals to integrate the UI successfully with the underlying hardware.
@@ -140,7 +140,7 @@ Multi-vertical technology partner running product/infra work across hospitality,
 
 ### Blackwins Tech Solutions
 **Frontend Developer (Intern)** | May 2022 - Jul 2022
-**Chennai, Tamil Nadu, India**
+**Chennai, India**
 
 - Built user-facing interfaces for a SaaS product using React.js and Material UI, improving user engagement and satisfaction.
 - Collaborated with designers and product managers to translate requirements into shipped features.
@@ -209,7 +209,7 @@ Multi-vertical technology partner running product/infra work across hospitality,
 - Built (not yet launched) an e-commerce platform for an artisan dessert brand (handcrafted brownies, brookies, cupcakes, and cookies with delivery across Tamil Nadu), with full menu/cart/categorization, Sanity CMS webhook-driven revalidation, and React Email transactional templates.
 - **Stack:** Next.js 16, React 19, TypeScript, Sanity CMS, Tailwind CSS, Radix UI, Zustand, React Email
 
-### Junglithenomad: Wix CMS Video Carousel
+### Jungli The Nomad: Wix CMS Video Carousel
 **Freelance, Full-stack** | Jul 2024 - Dec 2025
 
 - Built a custom, server-hydrated video testimonial carousel pulling content natively from **2,500+ videos** in the client's existing Wix CMS, embedded into their site via iframe, with lazy loading and infinite pagination for performance across the large catalog.

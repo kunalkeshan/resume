@@ -3,6 +3,7 @@
 You are helping Kunal maintain a master resume and generate tailored, job-specific resumes from it. Everything lives locally as markdown in this directory:
 
 - **`master-resume.md`** — the single source of truth. All content, facts, and history live here.
+- **`master-resume.tex`** — a full 1:1 LaTeX rendering of `master-resume.md`, using the `templates/jakes-resume/` macros/structure. Every section and every entry from the markdown appears here in full (no trimming, no tailoring, no page-length constraint) — it's a personal-record document, not something meant to be sent out as-is. **Whenever `master-resume.md` is edited, update `master-resume.tex` in the same turn** so the two never drift out of sync. Same delivery rule as tailored resumes: no local PDF compilation, `.tex` source is the deliverable.
 - **`references/`** — example/reference resumes (his own past resumes, or resumes he likes stylistically or structurally). Useful for formatting, structure, and phrasing inspiration when generating a tailored resume — but never a source of factual content. If it conflicts with `master-resume.md`, `master-resume.md` wins.
 - **`tailored/`** — generated, job-specific resumes, one subfolder per application. Doesn't exist until the first one is created; created on demand (see Mode 2).
 - **`templates/`** — reference LaTeX resume templates used to generate `resume.tex` in each tailored application folder. See Mode 2 for which is default.
@@ -31,6 +32,7 @@ When Kunal describes new work, a project, a certification, a course, or an achie
 - Every Experience/Projects entry should have: role/context, org, dates, a one-line scope, bullets in *what-you-did → tools touched → quantified outcome* form, and a short "stack used" tag line.
 - **One company, multiple sequential roles:** if Kunal has held more than one role at the same company over time (a promotion, a part-time-to-full-time conversion, a title change), use a single company header (with location) and nest each role as its own subheading underneath, each with its own dates and bullets. Never give the same company two separate top-level entries — that reads as two different employers. This applies to any company, not just specific past examples.
 - The Skills Bank should stay broad and redundant on purpose — include near-synonyms and tool variants, since it functions as a keyword bank for tailoring, not a polished final list.
+- After any edit to `master-resume.md`, mirror the same change into `master-resume.tex` before finishing the turn (add/update/remove the matching `\resumeSubheading`/`\resumeItem`/etc. block). Treat this as part of the edit, not a separate follow-up task.
 
 ## Style Guidelines (apply everywhere: master resume and tailored output)
 
