@@ -27,9 +27,16 @@ When Kunal describes new work, a project, a certification, a course, or an achie
   7. Certifications & Courses
   8. Awards/Recognition
   9. Extras (optional)
-- **Experience** = formal jobs. **Projects/Freelance** = independent/freelance work (e.g. Sunder Clinic and similar self-directed work) — keep this in its own section, never mixed into Experience.
+- **Experience** = formal jobs. **Projects/Freelance** = independent/freelance work (e.g. Sunder Clinic and similar self-directed work) — keep this in its own section, never mixed into Experience. Client/product work done as an employee (e.g. a StejasSYS client engagement) is Experience, never Projects, even if it resembles freelance work in shape.
 - Every Experience/Projects entry should have: role/context, org, dates, a one-line scope, bullets in *what-you-did → tools touched → quantified outcome* form, and a short "stack used" tag line.
+- **One company, multiple sequential roles:** if Kunal has held more than one role at the same company over time (a promotion, a part-time-to-full-time conversion, a title change), use a single company header (with location) and nest each role as its own subheading underneath, each with its own dates and bullets. Never give the same company two separate top-level entries — that reads as two different employers. This applies to any company, not just specific past examples.
 - The Skills Bank should stay broad and redundant on purpose — include near-synonyms and tool variants, since it functions as a keyword bank for tailoring, not a polished final list.
+
+## Style Guidelines (apply everywhere: master resume and tailored output)
+
+- **No em dashes.** Em dashes ("—") read as AI-generated to reviewers. Rewrite sentences/clauses using periods, commas, colons, or parentheses instead. This applies to prose bullets, headers, and connecting clauses alike — don't reach for "—" as a default connector. A plain hyphen in a date range (e.g. "Jan 2025-Present") or a compound adjective is fine; it's the sentence-joining em dash that must go.
+- **Projects/Freelance bullets: keep tight, 1-2 per entry.** This section should read as a scannable list, not a second Experience section. Core Experience entries can run fuller (2-4 bullets) since that's the primary substance of a resume, especially for senior roles.
+- **Two pages is an accepted default for senior/backend-heavy roles.** For a senior-level JD or when Kunal's relevant experience is substantial, don't ask about page length before defaulting to 2 pages — go ahead and use it. Still ask if the role reads as junior/early-career, where 1 page may fit better.
 
 **2. Generating a tailored resume for a specific job**
 
@@ -38,7 +45,7 @@ When Kunal gives you a job description (pasted in chat — it doesn't need to li
 - Read `master-resume.md`. Optionally check `references/` if Kunal wants a specific style/structure mirrored.
 - Identify the role's key requirements, tools, and phrasing, and pull the most relevant Experience/Projects/Skills/Certifications entries — mirroring the JD's exact terminology where it's honestly true to what he's done (e.g. "Kubernetes," not "container orchestration," if the JD says Kubernetes and he's actually used it).
 - Rewrite the positioning summary specifically for that role.
-- **Length:** don't force a fixed page count. Default to whatever length the content and the role's seniority naturally support, but ask Kunal if the role or his experience level makes the 1-page-vs-2-page call ambiguous.
+- **Length:** don't force a fixed page count. Default to whatever length the content and the role's seniority naturally support. For senior/backend-heavy roles, default to 2 pages without asking (see Style Guidelines above); ask Kunal only if the role or his experience level makes the call genuinely ambiguous (e.g. an early-career JD).
 - **Format:** ATS-compatibility is the priority — single column, standard section headings (Experience, Skills, Education, etc.), no tables/text boxes/graphics/multi-column layouts. This applies equally to both output formats below — the LaTeX output must be just as ATS-safe as the markdown, never more decorative at the cost of parseability.
 - **Delivery:** save every tailored application into its own folder at `tailored/<company-slug>-<role-slug>-<date>/`, containing:
   - `resume.md` — the markdown version (source of truth for content)

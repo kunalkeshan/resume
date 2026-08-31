@@ -34,7 +34,7 @@ If `master-resume.md` doesn't support a claim the JD wants, leave it out — don
    - Which Certifications/Education items matter for this role
 5. **Rewrite the Positioning Summary** specifically for this role — mirror the JD's language, lead with the most relevant strengths.
 6. **Assemble the tailored resume** in ATS-safe format (see Format below).
-7. **Length:** don't force a fixed page count — let content and seniority drive it. If the 1-page-vs-2-page call is ambiguous for this role/his experience level, ask.
+7. **Length:** don't force a fixed page count — let content and seniority drive it. For senior/backend-heavy roles, default to 2 pages without asking. Ask Kunal only if the 1-page-vs-2-page call is genuinely ambiguous (e.g. an early-career JD).
 8. **Save**, following the folder convention below.
 
 ## Format Requirements (ATS-Compatible)
@@ -43,6 +43,9 @@ If `master-resume.md` doesn't support a claim the JD wants, leave it out — don
 - Standard section headings: Summary, Experience, Skills, Education, Projects, Certifications
 - No tables, text boxes, multi-column layouts, graphics, icons, or photos — in either output format
 - Clean typography/spacing/emphasis is fine as long as it doesn't break ATS parsing on export
+- **No em dashes ("—") anywhere** — headers, bullets, connecting clauses. They read as AI-generated. Use a period, comma, colon, or parentheses instead. A plain hyphen in a date range or compound adjective is fine.
+- **One company, multiple roles → one header, nested role subheadings.** If a company has more than one sequential role in `master-resume.md` (promotion, title change, part-time-to-full-time conversion), render it as a single company heading with each role nested underneath as its own subheading + dates + bullets. Never split one company into two top-level Experience entries — it reads as two employers.
+- **Projects section: 1-2 tight bullets per entry.** Keep it scannable, not a second Experience section. Core Experience entries can run fuller (2-4 bullets).
 
 ## Delivery: Folder Convention
 

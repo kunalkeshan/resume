@@ -21,6 +21,7 @@ Per this project's `CLAUDE.md`: **never invent or skip a metric.** If Kunal does
 - Passive/vague verbs: "responsible for," "helped with," "worked on," "assisted with"
 - No number — describes a duty, not an outcome
 - Too long (should be 1–2 lines)
+- Uses an em dash ("—") to join clauses — reads as AI-generated. Use a period, comma, colon, or parentheses instead.
 
 ## What Makes a Bullet Strong
 

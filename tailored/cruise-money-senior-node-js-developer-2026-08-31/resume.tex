@@ -119,7 +119,7 @@
 %-----------SUMMARY-----------
 \section{Summary}
 \resumeSubHeadingListStart
-  \resumeItem{Backend-leaning full-stack engineer specializing in Node.js and NestJS, with hands-on experience architecting and shipping a live, production financial-transaction system. Sole backend architect for a ride-hailing platform processing real payments via Razorpay — owning API architecture, a security-hardened RBAC/access-control layer, PII protection, and a thorough Jest-driven unit test suite across the backend and frontend. Comfortable across the full stack with React.js on the frontend, and experienced with AWS deployment (S3, EC2, CloudFront). Additional fintech exposure through contract work building AI-assisted tools for Chartered Accountant and financial-advisory clients. Product-first engineer who has owned systems end-to-end — from architecture and security design through backend, frontend, and deployment.}
+  \resumeItem{Backend-leaning full-stack engineer specializing in Node.js and NestJS, with hands-on experience architecting and shipping a live, production financial-transaction system. Sole backend architect for a ride-hailing platform processing real payments via Razorpay, owning API architecture, a security-hardened RBAC/access-control layer, PII protection, and a thorough Jest-driven unit test suite across the backend and frontend. Comfortable across the full stack with React.js on the frontend, and experienced with AWS deployment (S3, EC2, CloudFront). Additional fintech exposure through contract work building AI-assisted tools for Chartered Accountant and financial-advisory clients. Product-first engineer who has owned systems end-to-end, from architecture and security design through backend, frontend, and deployment.}
 \resumeSubHeadingListEnd
 
 
@@ -129,24 +129,25 @@
 
     \resumeSubheading
       {StejasSYS}{Jan 2025 -- Present}
-      {Software Engineer}{Chennai, Tamil Nadu, India}
+      {Software Engineer (Full-time)}{Chennai, Tamil Nadu, India}
       \resumeItemListStart
-        \resumeItem{Architected and built the NestJS backend for \textbf{Zion Taxi}, a live ride-hailing platform processing real payments — 300+ active drivers, ~100 rides/month (outstation and one-way-drop trips) — owning module boundaries, the fare/pricing-strategy pattern, caching/coherency design, and the RBAC permission model end-to-end.}
-        \resumeItem{Implemented the platform's transactional core: Razorpay payment gateway integration, commission/ledger settlement (GST-exclusive), and rider debt/balance resolution — real-money flows with correctness and auditability requirements.}
+        \resumeItem{Architected and built the NestJS backend for \textbf{Zion Taxi}, a live ride-hailing platform processing real payments (300+ active drivers, ~100 rides/month across outstation and one-way-drop trips), owning module boundaries, the fare/pricing-strategy pattern, caching/coherency design, and the RBAC permission model end-to-end.}
+        \resumeItem{Implemented the platform's transactional core: Razorpay payment gateway integration, commission/ledger settlement (GST-exclusive), and rider debt/balance resolution, with correctness and auditability requirements for real-money flows.}
         \resumeItem{Built a security-hardened access layer: RBAC with granular permission grants and audit-actor coverage, PII-masking interceptors, WebAuthn device-carry, and CIDR-based access restriction.}
-        \resumeItem{Wrote and maintain the platform's unit test suite using Jest — 231 backend spec files (payments, RBAC/access control, fare pricing, PII masking, realtime Socket.io gateways) and 57 frontend test files on the companion React admin dashboard (permissions, fare display, booking/audit logic); ~3,700 individual test cases.}
-        \resumeItem{Built the React 19/Next.js admin dashboard for internal operations — live trip tracking, fare/commission management, and driver/rider administration.}
+        \resumeItem{Wrote and maintain the platform's unit test suite using Jest: 231 backend spec files (payments, RBAC/access control, fare pricing, PII masking, realtime Socket.io gateways) and 57 frontend test files on the companion React admin dashboard (permissions, fare display, booking/audit logic); ~3,700 individual test cases.}
+        \resumeItem{Built the conversation orchestration core, RAG-based knowledge retrieval system (pgvector), and admin API for \textbf{Innkraft's AI hotel sales agent}, a LangChain/LangGraph-powered WhatsApp/Telegram assistant handling guest conversations and booking flows for ~5 hotel clients; built one of three live booking-provider integrations and a 60+ script regression-eval framework serving as the system's primary conversation-quality safety net.}
+        \resumeItem{Designed and implemented the RBAC foundation (Better Auth organization plugin with custom permission statements) for \textbf{Culinex}, an in-house restaurant operations platform, alongside full-stack ownership of its components, routes, and database schema.}
         \resumeItem{Own the company's cloud infrastructure: GCP IAM policies, load balancers, CDNs, Docker/Docker Compose deployments, and GitHub Actions CI/CD across the company's product lines.}
-        \resumeItem{\textbf{Stack:} NestJS, TypeScript, Jest, Razorpay, RBAC/WebAuthn, Redis, Socket.io, Drizzle ORM, PostgreSQL, React 19, Next.js, Docker, GCP, GitHub Actions}
+        \resumeItem{Authored technical documentation across code-level, developer onboarding, and business/feature-facing audiences, and coordinated day-to-day with a cross-functional engineering team (~3-5 people) and the on-site operations team running the platform's driver/rider operations.}
+        \resumeItem{\textbf{Stack:} NestJS, TypeScript, Jest, Razorpay, RBAC/WebAuthn, Redis, Socket.io, Drizzle ORM, Prisma, PostgreSQL, LangChain, LangGraph, pgvector, Better Auth, React 19, Next.js, Docker, GCP, GitHub Actions}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {StejasSYS}{Jul 2024 -- Dec 2024}
-      {Software Developer}{Chennai, Tamil Nadu, India}
+      \resumeSubSubheading
+        {Software Developer (Part-time)}{Jul 2024 -- Dec 2024}
       \resumeItemListStart
         \resumeItem{Built full-stack features using Next.js, TypeScript, Tailwind CSS, and Payload CMS, leading the transition from low-code tooling to custom-built solutions.}
         \resumeItem{Implemented SSG with on-demand ISR and CMS webhook integrations for seamless content sync.}
-        \resumeItem{Diagnosed and fixed a major performance bottleneck — optimized image handling and disabled unnecessary prefetching, cutting page load time from 15s to 1--2s.}
+        \resumeItem{Diagnosed and fixed a major performance bottleneck: optimized image handling and disabled unnecessary prefetching, cutting page load time from 15s to 1--2s.}
         \resumeItem{Gained hands-on experience with GCP services (Compute Engine, Artifact Registry, Cloud Storage) and multi-environment deployment pipelines.}
         \resumeItem{\textbf{Stack:} Next.js, TypeScript, Tailwind CSS, Payload CMS, Docker, GCP}
       \resumeItemListEnd
@@ -155,10 +156,10 @@
       {Flookup Capital Advisors (One21.ai)}{Sep 2023 -- Present}
       {Contract Software Engineer}{Mumbai, Maharashtra, India (remote)}
       \resumeItemListStart
-        \resumeItem{Built and deployed custom web applications for finance \& tech clients, primarily Chartered Accountant–related fintech services, under the One21.ai product umbrella.}
+        \resumeItem{Built and deployed custom web applications for finance \& tech clients, primarily Chartered Accountant-related fintech services, under the One21.ai product umbrella.}
         \resumeItem{Developed and scaled backend solutions on AWS and Supabase, including load balancers, S3 storage, and CloudFront CDN for optimized asset delivery.}
         \resumeItem{Delivered dynamic CMS-driven solutions letting non-technical client teams update content independently.}
-        \resumeItem{Shipped production fintech-adjacent tools including \textbf{MCA Tech} — a business intelligence platform with real-time financial data and risk assessments across 2.6M+ companies — and \textbf{CAGPT}, an AI-powered platform delivering finance, taxation, and compliance guidance for accounting professionals.}
+        \resumeItem{Shipped production fintech-adjacent tools including \textbf{MCA Tech}, a business intelligence platform with real-time financial data and risk assessments across 2.6M+ companies, and \textbf{CAGPT}, an AI-powered platform delivering finance, taxation, and compliance guidance for accounting professionals.}
         \resumeItem{\textbf{Stack:} Next.js, TypeScript, AWS, Supabase, Vercel}
       \resumeItemListEnd
 
@@ -180,8 +181,17 @@
       \resumeProjectHeading
           {\textbf{9wealth (unlaunched)} $|$ \emph{NestJS, Prisma, Supabase, OpenAI API}}{Sep 2025 -- Present}
           \resumeItemListStart
-            \resumeItem{Building a personal finance app for tracking budget, investments, assets, and net worth, with an AI chat interface for spending/investment insights.}
-            \resumeItem{Backend built on NestJS, Prisma, and Supabase, with OpenAI API integration powering the AI trend-chat feature; React Native/Expo mobile frontend.}
+            \resumeItem{Building a personal finance app for tracking budget, investments, assets, and net worth, with an AI chat interface for spending/investment insights; backend built on NestJS, Prisma, and Supabase with OpenAI API integration, alongside a React Native/Expo mobile frontend.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Community Knowledge Weaver} $|$ \emph{IBM watsonx Orchestrate, MCP, TypeScript}}{Jan 2026}
+          \resumeItemListStart
+            \resumeItem{Built an agentic AI assistant unifying scattered organizational knowledge into one chat interface on IBM watsonx Orchestrate, with a multi-agent orchestrator routing questions to specialist agents able to both answer and take action via MCP tools.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Junglithenomad} $|$ \emph{Next.js, TanStack Query, Wix CMS/Data API}}{Jul 2024 -- Dec 2025}
+          \resumeItemListStart
+            \resumeItem{Built a custom, server-hydrated video testimonial carousel pulling content natively from 2,500+ videos in the client's existing Wix CMS, with lazy loading and infinite pagination for performance across the large catalog.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -206,9 +216,11 @@
      \textbf{Backend}{: Node.js, Express.js, NestJS, REST API design \& architecture, Socket.io (realtime/WebSockets), Drizzle ORM, Prisma ORM} \\
      \textbf{Frontend}{: React.js, React 19, Next.js, Tailwind CSS, TanStack Query, Zustand, Redux} \\
      \textbf{Testing}{: Jest, ts-jest, Supertest, Unit Testing, test-driven development on service/business logic} \\
-     \textbf{Payments \& Security}{: Razorpay (payment gateway integration), RBAC (role-based access control, permission grants, audit-actor coverage), WebAuthn, PII masking/data protection, CIDR-based access control, Auth0, OAuth} \\
+     \textbf{Payments \& Security}{: Razorpay (payment gateway integration), RBAC (role-based access control, permission grants, audit-actor coverage), Better Auth (multi-tenant RBAC), WebAuthn, PII masking/data protection, CIDR-based access control, Auth0, OAuth} \\
+     \textbf{AI/LLM Systems}{: LangChain, LangGraph (stateful agent orchestration), Retrieval-Augmented Generation (RAG) with pgvector, Langfuse (LLM observability/tracing), OpenAI API} \\
      \textbf{Cloud \& Infrastructure}{: AWS (S3, EC2, CloudFront), Google Cloud Platform (IAM, load balancers, CDN, Compute Engine), Docker \& Docker Compose, Nginx, GitHub Actions (CI/CD), Redis} \\
-     \textbf{Databases}{: PostgreSQL (Drizzle/Prisma/Supabase), MongoDB, MySQL}
+     \textbf{Databases}{: PostgreSQL (Drizzle/Prisma/Supabase), MongoDB, MySQL} \\
+     \textbf{Collaboration \& Communication}{: Cross-functional coordination (engineering and operations), developer mentorship, technical documentation (code-level, onboarding, business-facing), stakeholder communication}
     }}
  \end{itemize}
 
@@ -217,11 +229,11 @@
 \section{Certifications}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Claude Code 101} -- Anthropic Academy, Aug 2026 \\
-     \textbf{Claude 101} -- Anthropic Academy, Aug 2026 \\
-     \textbf{The Node.js Master Class} -- Pirple, Jul 2022 \\
-     \textbf{M001: MongoDB Basics} -- MongoDB University, Jan 2022 \\
-     \textbf{SQL for Data Science} -- Coursera / UC Davis, Apr 2023
+     \textbf{Claude Code 101}: Anthropic Academy, Aug 2026 \\
+     \textbf{Claude 101}: Anthropic Academy, Aug 2026 \\
+     \textbf{The Node.js Master Class}: Pirple, Jul 2022 \\
+     \textbf{M001: MongoDB Basics}: MongoDB University, Jan 2022 \\
+     \textbf{SQL for Data Science}: Coursera / UC Davis, Apr 2023
     }}
  \end{itemize}
 
