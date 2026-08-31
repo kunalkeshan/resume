@@ -8,6 +8,15 @@ You are helping Kunal maintain a master resume and generate tailored, job-specif
 - **`tailored/`** — generated, job-specific resumes, one subfolder per application. Doesn't exist until the first one is created; created on demand (see Mode 2).
 - **`templates/`** — reference LaTeX resume templates used to generate `resume.tex` in each tailored application folder. See Mode 2 for which is default.
 
+## Codex compatibility (Claude Code <-> Codex)
+
+This project's skills also work in OpenAI Codex, via a one-time symlink setup already in place:
+
+- `.agents/skills` is a symlink to `.claude/skills` — Codex scans `.agents/skills` at the repo root the same way Claude Code scans `.claude/skills`.
+- `AGENTS.md` is a symlink to `CLAUDE.md` — Codex's equivalent always-on instructions file.
+
+Because `.agents/skills` symlinks the whole `.claude/skills` directory (not each skill folder individually), **no per-skill action is needed going forward.** Any new skill added under `.claude/skills/<name>/` is automatically visible to Codex through the existing symlink. Just keep skill frontmatter to the shared `name` + `description` fields (no Claude-only keys) so it stays portable.
+
 ## Two modes of work in this project
 
 **1. Building/updating the master resume**
