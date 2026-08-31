@@ -1,0 +1,230 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Kunal Keshan} \\ \vspace{1pt}
+    \small +91 89398 81702 $|$ \href{mailto:kunalkeshan12@gmail.com}{\underline{kunalkeshan12@gmail.com}} $|$
+    \href{https://linkedin.com/in/kunalkeshan}{\underline{linkedin.com/in/kunalkeshan}} $|$
+    \href{https://github.com/kunalkeshan}{\underline{github.com/kunalkeshan}} $|$
+    \href{https://kunalkeshan.dev}{\underline{kunalkeshan.dev}} $|$
+    Chennai, Tamil Nadu, India
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Summary}
+\resumeSubHeadingListStart
+  \resumeItem{Backend-leaning full-stack engineer specializing in Node.js and NestJS, with hands-on experience architecting and shipping a live, production financial-transaction system. Sole backend architect for a ride-hailing platform processing real payments via Razorpay — owning API architecture, a security-hardened RBAC/access-control layer, PII protection, and a thorough Jest-driven unit test suite across the backend and frontend. Comfortable across the full stack with React.js on the frontend, and experienced with AWS deployment (S3, EC2, CloudFront). Additional fintech exposure through contract work building AI-assisted tools for Chartered Accountant and financial-advisory clients. Product-first engineer who has owned systems end-to-end — from architecture and security design through backend, frontend, and deployment.}
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {StejasSYS}{Jan 2025 -- Present}
+      {Software Engineer}{Chennai, Tamil Nadu, India}
+      \resumeItemListStart
+        \resumeItem{Architected and built the NestJS backend for \textbf{Zion Taxi}, a live ride-hailing platform processing real payments — 300+ active drivers, ~100 rides/month (outstation and one-way-drop trips) — owning module boundaries, the fare/pricing-strategy pattern, caching/coherency design, and the RBAC permission model end-to-end.}
+        \resumeItem{Implemented the platform's transactional core: Razorpay payment gateway integration, commission/ledger settlement (GST-exclusive), and rider debt/balance resolution — real-money flows with correctness and auditability requirements.}
+        \resumeItem{Built a security-hardened access layer: RBAC with granular permission grants and audit-actor coverage, PII-masking interceptors, WebAuthn device-carry, and CIDR-based access restriction.}
+        \resumeItem{Wrote and maintain the platform's unit test suite using Jest — 231 backend spec files (payments, RBAC/access control, fare pricing, PII masking, realtime Socket.io gateways) and 57 frontend test files on the companion React admin dashboard (permissions, fare display, booking/audit logic); ~3,700 individual test cases.}
+        \resumeItem{Built the React 19/Next.js admin dashboard for internal operations — live trip tracking, fare/commission management, and driver/rider administration.}
+        \resumeItem{Own the company's cloud infrastructure: GCP IAM policies, load balancers, CDNs, Docker/Docker Compose deployments, and GitHub Actions CI/CD across the company's product lines.}
+        \resumeItem{\textbf{Stack:} NestJS, TypeScript, Jest, Razorpay, RBAC/WebAuthn, Redis, Socket.io, Drizzle ORM, PostgreSQL, React 19, Next.js, Docker, GCP, GitHub Actions}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {StejasSYS}{Jul 2024 -- Dec 2024}
+      {Software Developer}{Chennai, Tamil Nadu, India}
+      \resumeItemListStart
+        \resumeItem{Built full-stack features using Next.js, TypeScript, Tailwind CSS, and Payload CMS, leading the transition from low-code tooling to custom-built solutions.}
+        \resumeItem{Implemented SSG with on-demand ISR and CMS webhook integrations for seamless content sync.}
+        \resumeItem{Diagnosed and fixed a major performance bottleneck — optimized image handling and disabled unnecessary prefetching, cutting page load time from 15s to 1--2s.}
+        \resumeItem{Gained hands-on experience with GCP services (Compute Engine, Artifact Registry, Cloud Storage) and multi-environment deployment pipelines.}
+        \resumeItem{\textbf{Stack:} Next.js, TypeScript, Tailwind CSS, Payload CMS, Docker, GCP}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Flookup Capital Advisors (One21.ai)}{Sep 2023 -- Present}
+      {Contract Software Engineer}{Mumbai, Maharashtra, India (remote)}
+      \resumeItemListStart
+        \resumeItem{Built and deployed custom web applications for finance \& tech clients, primarily Chartered Accountant–related fintech services, under the One21.ai product umbrella.}
+        \resumeItem{Developed and scaled backend solutions on AWS and Supabase, including load balancers, S3 storage, and CloudFront CDN for optimized asset delivery.}
+        \resumeItem{Delivered dynamic CMS-driven solutions letting non-technical client teams update content independently.}
+        \resumeItem{Shipped production fintech-adjacent tools including \textbf{MCA Tech} — a business intelligence platform with real-time financial data and risk assessments across 2.6M+ companies — and \textbf{CAGPT}, an AI-powered platform delivering finance, taxation, and compliance guidance for accounting professionals.}
+        \resumeItem{\textbf{Stack:} Next.js, TypeScript, AWS, Supabase, Vercel}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {LingoScriptAI}{Jul 2023 -- Mar 2024}
+      {Product Development Engineer}{Chennai, Tamil Nadu, India}
+      \resumeItemListStart
+        \resumeItem{Built the web application backend using Node.js and Express.js, alongside a TypeScript/Next.js frontend and Auth0 authentication.}
+        \resumeItem{Gained hands-on experience with AWS S3 and EC2, contributing to the tool's successful launch.}
+        \resumeItem{\textbf{Stack:} TypeScript, Next.js, Node.js, Express.js, Auth0, AWS}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{9wealth (unlaunched)} $|$ \emph{NestJS, Prisma, Supabase, OpenAI API}}{Sep 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Building a personal finance app for tracking budget, investments, assets, and net worth, with an AI chat interface for spending/investment insights.}
+            \resumeItem{Backend built on NestJS, Prisma, and Supabase, with OpenAI API integration powering the AI trend-chat feature; React Native/Expo mobile frontend.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SRM Institute of Science and Technology}{Sep 2020 -- May 2025}
+      {Bachelor of Technology (B.Tech), Electronics \& Communication Engineering}{Chennai, India}
+      \resumeItemListStart
+        \resumeItem{CGPA: 8.65}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript (ES6+), TypeScript, SQL, Python, Bash/Shell} \\
+     \textbf{Backend}{: Node.js, Express.js, NestJS, REST API design \& architecture, Socket.io (realtime/WebSockets), Drizzle ORM, Prisma ORM} \\
+     \textbf{Frontend}{: React.js, React 19, Next.js, Tailwind CSS, TanStack Query, Zustand, Redux} \\
+     \textbf{Testing}{: Jest, ts-jest, Supertest, Unit Testing, test-driven development on service/business logic} \\
+     \textbf{Payments \& Security}{: Razorpay (payment gateway integration), RBAC (role-based access control, permission grants, audit-actor coverage), WebAuthn, PII masking/data protection, CIDR-based access control, Auth0, OAuth} \\
+     \textbf{Cloud \& Infrastructure}{: AWS (S3, EC2, CloudFront), Google Cloud Platform (IAM, load balancers, CDN, Compute Engine), Docker \& Docker Compose, Nginx, GitHub Actions (CI/CD), Redis} \\
+     \textbf{Databases}{: PostgreSQL (Drizzle/Prisma/Supabase), MongoDB, MySQL}
+    }}
+ \end{itemize}
+
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Claude Code 101} -- Anthropic Academy, Aug 2026 \\
+     \textbf{Claude 101} -- Anthropic Academy, Aug 2026 \\
+     \textbf{The Node.js Master Class} -- Pirple, Jul 2022 \\
+     \textbf{M001: MongoDB Basics} -- MongoDB University, Jan 2022 \\
+     \textbf{SQL for Data Science} -- Coursera / UC Davis, Apr 2023
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

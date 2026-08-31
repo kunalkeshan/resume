@@ -12,7 +12,7 @@
 
 ## Positioning Summary
 
-Software engineer with a full-stack, infrastructure-leaning skill set — comfortable across React/Next.js frontends, Node.js/NestJS backends, CMS-driven content platforms, and GCP/AWS cloud infrastructure (IAM, CDNs, load balancers, Docker, CI/CD). Experience spans a fast-moving product/infra role at a multi-vertical startup, fintech contract work building AI-assisted tools, and a run of independent freelance builds across healthcare, e-commerce, hospitality, and personal branding. Comfortable owning a project end-to-end — from infra and backend to frontend and deployment — and equally comfortable going deep on one layer within a larger team. Open to full-stack, backend-leaning, or platform/infra-focused roles, at startups or larger organizations.
+Software engineer with a full-stack, infrastructure-leaning skill set — comfortable across React/Next.js frontends, Node.js/NestJS backends, CMS-driven content platforms, and GCP/AWS cloud infrastructure (IAM, CDNs, load balancers, Docker, CI/CD). Architected and built the NestJS backend for a live, production ride-hailing platform (Zion Taxi) end-to-end — payments (Razorpay), RBAC/security, fare-pricing engine, and a Jest-driven unit test suite (231 backend + 57 frontend spec files) — alongside its React admin dashboard. Experience spans a fast-moving product/infra role at a multi-vertical startup, fintech contract work building AI-assisted tools, and a run of independent freelance builds across healthcare, e-commerce, hospitality, and personal branding. Comfortable owning a project end-to-end — from infra and backend to frontend and deployment — and equally comfortable going deep on one layer within a larger team. Open to full-stack, backend-leaning, or platform/infra-focused roles, at startups or larger organizations.
 
 *[This is a keyword-rich reference summary for a master doc — tailor sharply per role when generating a job-specific resume.]*
 
@@ -22,7 +22,11 @@ Software engineer with a full-stack, infrastructure-leaning skill set — comfor
 
 **Frontend/Mobile:** React.js, Next.js (App Router, SSG, ISR, on-demand revalidation), React Native, Expo, Tailwind CSS, shadcn/ui, Radix UI, Material UI, GSAP, Framer Motion / Motion, TanStack Query, Zustand, Redux, React Hook Form, Zod, Embla Carousel
 
-**Backend:** Node.js, Express.js, NestJS, Prisma ORM, REST APIs, FFMPEG (server-side video processing)
+**Backend:** Node.js, Express.js, NestJS, Prisma ORM, Drizzle ORM, REST APIs, API architecture & design, Socket.io (realtime/WebSockets), FFMPEG (server-side video processing)
+
+**Testing:** Jest, ts-jest, Supertest, unit testing, test-driven development on service/business logic
+
+**Payments & Security:** Razorpay (payment gateway integration), RBAC (role-based access control, permission grants, audit-actor coverage), WebAuthn, PII masking/data protection, CIDR-based access control
 
 **CMS/Content:** Sanity, Payload CMS, Directus, Wix CMS API, Portable Text, React Email
 
@@ -34,7 +38,7 @@ Software engineer with a full-stack, infrastructure-leaning skill set — comfor
 
 **DevOps/Tooling:** Bash scripting & automation, GitHub Actions (CI/CD), Git submodules, build tagging & versioned deploys, Postman, Google Analytics (custom event tracking)
 
-**Databases:** MongoDB, MySQL, PostgreSQL (via Prisma/Supabase)
+**Databases:** MongoDB, MySQL, PostgreSQL (via Prisma/Drizzle/Supabase), Redis
 
 **Other:** Ngrok, web scraping, Nodemailer, i18n (next-intl)
 
@@ -48,6 +52,11 @@ Software engineer with a full-stack, infrastructure-leaning skill set — comfor
 Multi-vertical technology partner running product/infra work across hospitality, food & beverage, wellness, and ride-hailing clients, with operations in Atlanta, Ottawa, and Chennai. Kunal has held two roles here.
 
 **Software Engineer** — Jan 2025 – Present
+- Architected and built the NestJS backend for **Zion Taxi**, StejasSYS's in-house ride-hailing product — live in production with 300+ drivers, processing ~100 rides/month (outstation and one-way-drop trips) — owning module boundaries, the fare/pricing-strategy pattern, caching/coherency design, and the RBAC permission model end-to-end.
+- Implemented the platform's transactional core: Razorpay payment gateway integration, commission/ledger settlement (GST-exclusive), and rider debt/balance resolution.
+- Built a security-hardened access layer: RBAC with granular permission grants and audit-actor coverage, PII-masking interceptors, WebAuthn device-carry, and CIDR-based access restriction.
+- Wrote and maintain the platform's unit test suite using Jest — 231 backend spec files (payments, RBAC/access control, fare pricing, PII masking, realtime WebSocket gateways) and 57 frontend test files on the companion React admin dashboard (permissions, fare display, booking/audit logic); ~3,700 individual test cases passing.
+- Built the React 19/Next.js admin dashboard (`taxi-web-admin`) for internal ops — live trip tracking, fare/commission management, and driver/rider administration.
 - Own the company's cloud infrastructure end-to-end: GCP IAM policies, load balancers, CDNs, and secret management across the company's core product lines — ride-hailing/taxi, hospitality (Innkraft, The Grand Regent), restaurant (Bytenosh, Culinex), and wellness/travel/Plugginn (embeddable widget platform).
 - Led infrastructure and backend setup for multiple projects, including deploying and maintaining Directus CMS instances with build tagging, code freezing, and version control across environments.
 - Migrated the shared reverse-proxy stack from a single monolithic Nginx config to a per-domain `conf.d/` structure (confirmed via `sys-proxy/nginx.conf.old`, 471 lines, vs. the current split config), improving maintainability across the company's multiple hosted domains.
@@ -55,7 +64,7 @@ Multi-vertical technology partner running product/infra work across hospitality,
 - Set up GitHub Actions CI/CD (confirmed live in `wellness-web`, `wellness-mobile-app`, and `plugginn`) alongside Bash-based local dev/deploy tooling.
 - Authored internal technical documentation — READMEs, deployment guides, infrastructure overviews — to reduce onboarding friction and improve team autonomy.
 - Mentor new developers and drive continuous improvement in architecture, process, and team productivity while staying hands-on with engineering work.
-- **Stack:** GCP, Docker/Docker Compose, Nginx, Directus, GitHub Actions, Bash
+- **Stack:** NestJS, Jest, Razorpay, RBAC/WebAuthn, Redis, Socket.io, Drizzle ORM, PostgreSQL, React 19, Next.js, GCP, Docker/Docker Compose, Nginx, Directus, GitHub Actions, Bash
 
 **Software Developer** — Jul 2024 – Dec 2024
 - Built full-stack features using Next.js, TypeScript, Tailwind CSS, and Payload CMS, leading the transition from low-code tooling (Wix) to custom-built solutions.
