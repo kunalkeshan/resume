@@ -212,7 +212,7 @@ Multi-vertical technology partner running product/infra work across hospitality,
 ### Jungli The Nomad: Wix CMS Video Carousel
 **Freelance, Full-stack** | Jul 2024 - Dec 2025
 
-- Built a custom, server-hydrated video testimonial carousel pulling content natively from **2,500+ videos** in the client's existing Wix CMS, embedded into their site via iframe, with lazy loading and infinite pagination for performance across the large catalog.
+- Built a custom, server-hydrated video testimonial carousel pulling content natively from **50+ videos** in the client's existing Wix CMS, embedded into their site via iframe, with lazy loading and infinite pagination for smooth playback across the carousel.
 - **Stack:** Next.js 14, TanStack Query, Wix CMS/Data API, Embla Carousel
 
 *(Additional smaller/older self-directed and academic projects, kept as a compact list per your steer, full detail available in each repo if needed for keyword mining:)*
