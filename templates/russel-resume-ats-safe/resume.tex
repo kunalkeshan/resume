@@ -1,0 +1,75 @@
+%-------------------------------------------------------------------------------
+% RusselResume — ATS-safe variant
+% Based on: https://github.com/themagicalmammal/Resume (russell.cls)
+% Changes from upstream:
+%   - No \photo{} call — the class collapses its photo minipage to 0-width
+%     when unset, so the rendered header is a single full-width column.
+%   - Contact links (LinkedIn/GitHub/etc.) are NOT set via the class's
+%     \linkedin{}/\github{}/\homepage{} commands, because those always render
+%     a FontAwesome icon glyph next to the value (hardcoded in russell.cls).
+%     Instead they're passed as plain hyperlinked text via \extrainfo{},
+%     styled as bare links (no "https://", still real \href hyperlinks)
+%     matching Kunal's own resume convention.
+%-------------------------------------------------------------------------------
+\documentclass[11pt, letterpaper]{russell}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+\fontdir[fonts/]
+
+\colorlet{russell}{russell-black}
+
+\setbool{acvSectionColorHighlight}{true}
+
+\renewcommand{\acvSectionTopSkip}{0.0mm}
+\renewcommand{\acvSectionContentTopSkip}{0.0mm}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+% No \photo{} — keep unset so the header stays single-column.
+\name{<Last>}{<First>}
+\address{<City, State>}
+\mobile{<phone>}
+\email{<email>}
+% Plain-text hyperlinked contact links (no icons) — bare display text via \href,
+% same convention as templates/jakes-resume.
+\extrainfo{%
+  \href{https://linkedin.com/in/<handle>}{linkedin.com/in/<handle>}%
+  \acvHeaderSocialSep
+  \href{https://github.com/<handle>}{github.com/<handle>}%
+  \acvHeaderSocialSep
+  \href{https://<portfolio-domain>}{<portfolio-domain>}%
+}
+
+%-------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%-------------------------------------------------------------------------------
+% russell.cls loads biblatex unconditionally (see russell.cls "Bibliography"
+% section) — the tlmgr install below includes it even though this trimmed
+% variant has no publications section and cites nothing.
+\addbibresource{cv/references.bib}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader
+
+\makecvfooter
+  {\today}
+  {}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately — fill in per application.
+%-------------------------------------------------------------------------------
+\input{cv/summary.tex}
+\input{cv/experience.tex}
+\input{cv/projects.tex}
+\input{cv/skills.tex}
+\input{cv/education.tex}
+\input{cv/achievements.tex}
+
+\end{document}

@@ -4,7 +4,8 @@ You are helping Kunal maintain a master resume and generate tailored, job-specif
 
 - **`master-resume.md`** — the single source of truth. All content, facts, and history live here.
 - **`references/`** — example/reference resumes (his own past resumes, or resumes he likes stylistically or structurally). Useful for formatting, structure, and phrasing inspiration when generating a tailored resume — but never a source of factual content. If it conflicts with `master-resume.md`, `master-resume.md` wins.
-- **`tailored/`** — generated, job-specific resumes. Doesn't exist until the first one is created; created on demand (see Mode 2).
+- **`tailored/`** — generated, job-specific resumes, one subfolder per application. Doesn't exist until the first one is created; created on demand (see Mode 2).
+- **`templates/`** — reference LaTeX resume templates used to generate `resume.tex` in each tailored application folder. See Mode 2 for which is default.
 
 ## Two modes of work in this project
 
@@ -38,8 +39,18 @@ When Kunal gives you a job description (pasted in chat — it doesn't need to li
 - Identify the role's key requirements, tools, and phrasing, and pull the most relevant Experience/Projects/Skills/Certifications entries — mirroring the JD's exact terminology where it's honestly true to what he's done (e.g. "Kubernetes," not "container orchestration," if the JD says Kubernetes and he's actually used it).
 - Rewrite the positioning summary specifically for that role.
 - **Length:** don't force a fixed page count. Default to whatever length the content and the role's seniority naturally support, but ask Kunal if the role or his experience level makes the 1-page-vs-2-page call ambiguous.
-- **Format:** ATS-compatibility is the priority — single column, standard section headings (Experience, Skills, Education, etc.), no tables/text boxes/graphics/multi-column layouts. Within those constraints, some visual polish (clean typography, spacing, subtle emphasis) is welcome — just nothing that would break ATS parsing (markdown itself is fine; if exporting to another format, keep it single-column and plain-structure).
-- **Delivery:** save the result as a new markdown file at `tailored/<company-or-application-name>.md`. Ask Kunal for the company/application name if it isn't obvious from the JD, so the filename is sensible.
+- **Format:** ATS-compatibility is the priority — single column, standard section headings (Experience, Skills, Education, etc.), no tables/text boxes/graphics/multi-column layouts. This applies equally to both output formats below — the LaTeX output must be just as ATS-safe as the markdown, never more decorative at the cost of parseability.
+- **Delivery:** save every tailored application into its own folder at `tailored/<company-slug>-<role-slug>-<date>/`, containing:
+  - `resume.md` — the markdown version (source of truth for content)
+  - `resume.tex` — the same content rendered into the default LaTeX template (`templates/jakes-resume/`, unless Kunal asks for a different one from `templates/`)
+  - No local PDF compilation — `.tex` source is the deliverable. Kunal compiles it himself (e.g. via Overleaf) when he wants a PDF.
+
+  **Folder naming:**
+  - `<company-slug>` and `<role-slug>`: lowercase, spaces and punctuation replaced with hyphens, parenthetical qualifiers like "(Remote)" stripped.
+  - `<date>`: `YYYY-MM-DD`, the date the folder is first created — it does not change on later edits to the same application.
+  - Example: a Staff Backend Engineer (Remote) application to Stripe on 2026-08-31 → `tailored/stripe-staff-backend-engineer-2026-08-31/`.
+  - **Revisions:** if Kunal asks to redo/adjust an application for the same company + role on the same date, don't overwrite — append `-rev2`, `-rev3`, etc. to the folder name (e.g. `tailored/stripe-staff-backend-engineer-2026-08-31-rev2/`) so prior versions stay as history. A new date always gets a fresh, un-suffixed folder.
+  - Ask Kunal for the company/role if either isn't obvious from the JD, so the slug is sensible.
 - No need to keep a tracking log of past applications — Kunal manages that himself.
 
 ## Tone

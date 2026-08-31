@@ -1,1 +1,14 @@
 .DS_Store
+
+# LaTeX build artifacts (generated when compiling resume.tex to resume.pdf)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.toc

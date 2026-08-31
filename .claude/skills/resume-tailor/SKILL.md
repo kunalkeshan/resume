@@ -10,7 +10,7 @@ Generates a job-specific resume by selecting and reframing content from `master-
 ## When to Use
 
 - Kunal pastes a job description (JD) and asks for a tailored resume.
-- He asks to adjust an existing file in `tailored/` for a slightly different angle on the same or a similar role.
+- He asks to adjust an existing application folder in `tailored/` for a slightly different angle on the same or a similar role.
 
 ## Core Principle: Highlight, Don't Fabricate
 
@@ -35,14 +35,33 @@ If `master-resume.md` doesn't support a claim the JD wants, leave it out — don
 5. **Rewrite the Positioning Summary** specifically for this role — mirror the JD's language, lead with the most relevant strengths.
 6. **Assemble the tailored resume** in ATS-safe format (see Format below).
 7. **Length:** don't force a fixed page count — let content and seniority drive it. If the 1-page-vs-2-page call is ambiguous for this role/his experience level, ask.
-8. **Save** to `tailored/<company-or-application-name>.md`. Ask for the company/application name if it isn't obvious from the JD.
+8. **Save**, following the folder convention below.
 
 ## Format Requirements (ATS-Compatible)
 
-- Single column, plain markdown structure
+- Single column, plain structure — applies to both `resume.md` and `resume.tex`
 - Standard section headings: Summary, Experience, Skills, Education, Projects, Certifications
-- No tables, text boxes, multi-column layouts, or graphics
+- No tables, text boxes, multi-column layouts, graphics, icons, or photos — in either output format
 - Clean typography/spacing/emphasis is fine as long as it doesn't break ATS parsing on export
+
+## Delivery: Folder Convention
+
+Every tailored application is its own folder at `tailored/<company-slug>-<role-slug>-<date>/`:
+
+- `<company-slug>` / `<role-slug>`: lowercase, spaces/punctuation → hyphens, parentheticals like "(Remote)" stripped. Ask Kunal for the company/role if either isn't obvious from the JD.
+- `<date>`: `YYYY-MM-DD`, the folder's creation date — fixed at creation, not updated on later edits.
+- Revisions to the same company + role + date: append `-rev2`, `-rev3`, ... rather than overwriting. A new date gets a fresh folder.
+- Example: `tailored/stripe-staff-backend-engineer-2026-08-31/`
+
+Each folder contains:
+
+1. **`resume.md`** — the content source of truth for this application.
+2. **`resume.tex`** — the same content in the default template, `templates/jakes-resume/` (Jake's Resume — verified ATS-safe: single column, no icons/graphics, includes `glyphtounicode` for clean text extraction). Use a different template from `templates/` only if Kunal asks for one by name.
+   - **Self-contained templates** (`jakes-resume/`, `sb2nov-resume/` — a single `resume.tex`): copy that one file into the application folder as `resume.tex` and fill in its placeholders.
+   - **Multi-file templates** (`russel-resume-ats-safe/` — `resume.tex` + `russell.cls` + `fonts/` + `cv/*.tex`, linked by relative paths): copy the *entire template folder's contents* into the application folder first (the `.cls`, `fonts/`, and `cv/` subfolder all need to sit next to `resume.tex`, not just the top-level file), then fill in `resume.tex` and each `cv/*.tex` placeholder. Copying only `resume.tex` produces a file that cannot compile.
+   - Fill in the template's placeholders with content pulled straight from the already-assembled `resume.md` — don't re-derive content independently between the two formats, or they can drift.
+
+No local PDF compilation — `.tex` source is the deliverable. Kunal compiles it himself (e.g. via Overleaf) when he wants a PDF.
 
 ## Keyword Integration Rules
 
@@ -63,5 +82,6 @@ After generating, briefly summarize for Kunal:
 - What the rewritten Summary emphasizes
 - Which keywords from the JD were incorporated (and honestly matched)
 - Any JD requirements that `master-resume.md` doesn't support (so he knows the gap, rather than it being silently glossed over)
+- The folder path, and which files were saved (`resume.md` and `resume.tex`)
 
-Save the file — don't just print the resume in chat.
+Save the files — don't just print the resume in chat.

@@ -5,7 +5,7 @@ description: Check a tailored resume for ATS (Applicant Tracking System) compati
 
 # Resume ATS Optimizer
 
-Audits a resume (typically a file in `tailored/`, or a draft in chat) for ATS-parsing safety and keyword match against a job description.
+Audits a resume (typically `resume.md` or `resume.tex` inside an application folder under `tailored/`, or a draft in chat) for ATS-parsing safety and keyword match against a job description.
 
 ## When to Use
 
@@ -21,7 +21,7 @@ Audits a resume (typically a file in `tailored/`, or a draft in chat) for ATS-pa
 - Inconsistent date formats
 - Non-standard fonts/special characters (only relevant if exporting beyond markdown)
 
-Since this project keeps tailored resumes as single-column markdown per `CLAUDE.md`, most structural ATS risk is avoided by default — check for regressions if the file has drifted from that (e.g. someone added a markdown table for skills, multi-column formatting, etc).
+Since this project keeps tailored resumes single-column and plain-structure (both `resume.md` and `resume.tex`) per `CLAUDE.md`, most structural ATS risk is avoided by default — check for regressions if a file has drifted from that (e.g. a markdown table added for skills, a LaTeX template swapped in that uses multi-column/icon/photo elements, etc).
 
 ## Keyword Match Process
 
