@@ -26,16 +26,20 @@ If `master-resume.md` doesn't support a claim the JD wants, leave it out — don
 
 1. **Read `master-resume.md` fully.** This is the only source of factual content.
 2. **Optionally check `references/`** if Kunal wants a specific style/structure mirrored — for formatting/phrasing inspiration only, never facts.
-3. **Parse the JD** for: required/preferred skills, tools & technologies, seniority signals, core responsibilities, and the exact terminology used (e.g. "Kubernetes" vs "container orchestration").
-4. **Select relevant content:**
+3. **Research the hiring company and, if applicable, the recruiter/staffing agency.** The JD sometimes comes via a third-party recruiter or staffing firm rather than the company itself (e.g. hiring "via" an agency) — identify both:
+   - **The actual hiring company**: what it does/builds, industry, stage (startup/scale-up/enterprise), and anything relevant to positioning (e.g. fintech/regulated → emphasize security and compliance-adjacent work; product company → emphasize ownership and product thinking over pure contracting).
+   - **The recruiter/staffing agency**, if the JD is routed through one rather than posted directly by the company: note it's a third-party channel, but tailor the resume content itself to the *end company*, not the agency, since the agency is just the intermediary.
+   - If the JD gives little detail (common with agency-routed postings), do a quick web search on the company name/domain to fill gaps before tailoring. Use this research to sharpen the Positioning Summary and bullet selection, not to fabricate anything not in `master-resume.md`.
+4. **Parse the JD** for: required/preferred skills, tools & technologies, seniority signals, core responsibilities, and the exact terminology used (e.g. "Kubernetes" vs "container orchestration").
+5. **Select relevant content:**
    - Which Experience/Projects entries are most relevant, and in what order
    - Which bullets within each entry to lead with
    - Which Skills Bank items to surface (and phrase using the JD's terminology when accurate)
    - Which Certifications/Education items matter for this role
-5. **Rewrite the Positioning Summary** specifically for this role — mirror the JD's language, lead with the most relevant strengths.
-6. **Assemble the tailored resume** in ATS-safe format (see Format below).
-7. **Length:** don't force a fixed page count — let content and seniority drive it. For senior/backend-heavy roles, default to 2 pages without asking. Ask Kunal only if the 1-page-vs-2-page call is genuinely ambiguous (e.g. an early-career JD).
-8. **Save**, following the folder convention below.
+6. **Rewrite the Positioning Summary** specifically for this role — mirror the JD's language, lead with the most relevant strengths, and reflect the company research from step 3 (industry framing, product vs. agency-contract framing, etc.).
+7. **Assemble the tailored resume** in ATS-safe format (see Format below).
+8. **Length:** don't force a fixed page count — let content and seniority drive it. For senior/backend-heavy roles, default to 2 pages without asking. Ask Kunal only if the 1-page-vs-2-page call is genuinely ambiguous (e.g. an early-career JD).
+9. **Save**, following the folder convention below.
 
 ## Format Requirements (ATS-Compatible)
 
@@ -51,7 +55,7 @@ If `master-resume.md` doesn't support a claim the JD wants, leave it out — don
 
 Every tailored application is its own folder at `tailored/<company-slug>-<role-slug>-<date>/`:
 
-- `<company-slug>` / `<role-slug>`: lowercase, spaces/punctuation → hyphens, parentheticals like "(Remote)" stripped. Ask Kunal for the company/role if either isn't obvious from the JD.
+- `<company-slug>` / `<role-slug>`: lowercase, spaces/punctuation → hyphens, parentheticals like "(Remote)" stripped. Ask Kunal for the company/role if either isn't obvious from the JD. If the JD is routed through a recruiter/staffing agency, slug the *end hiring company* (from step 3's research), not the agency name.
 - `<date>`: `YYYY-MM-DD`, the folder's creation date — fixed at creation, not updated on later edits.
 - Revisions to the same company + role + date: append `-rev2`, `-rev3`, ... rather than overwriting. A new date gets a fresh folder.
 - Example: `tailored/stripe-staff-backend-engineer-2026-08-31/`
@@ -81,6 +85,7 @@ No local PDF compilation — `.tex` source is the deliverable. Kunal compiles it
 ## Output
 
 After generating, briefly summarize for Kunal:
+- The hiring company identified (and the recruiter/agency, if the JD was routed through one) and what the quick research turned up
 - Which Experience/Projects entries were included and in what order
 - What the rewritten Summary emphasizes
 - Which keywords from the JD were incorporated (and honestly matched)
