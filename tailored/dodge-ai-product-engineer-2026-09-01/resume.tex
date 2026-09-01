@@ -1,0 +1,229 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Kunal Keshan} \\ \vspace{1pt}
+    \small +91 89398 81702 $|$ \href{mailto:kunalkeshan12@gmail.com}{\underline{kunalkeshan12@gmail.com}} $|$
+    \href{https://linkedin.com/in/kunalkeshan}{\underline{linkedin.com/in/kunalkeshan}} $|$
+    \href{https://github.com/kunalkeshan}{\underline{github.com/kunalkeshan}} $|$
+    \href{https://kunalkeshan.dev}{\underline{kunalkeshan.dev}}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Summary}
+\resumeSubHeadingListStart
+  \resumeItem{Full-stack TypeScript engineer who has shipped a production LLM agent end to end: conversation orchestration, RAG retrieval, and the evaluation harness that keeps it honest. Architected and owns the \textbf{NestJS} backend for a live ride-hailing platform (300+ drivers, real payments) alongside its React admin dashboard, backed by a ~3,700-test Jest suite. Comfortable moving across the whole stack, from Postgres schema to React UI to Docker/GCP infra, and treats \textbf{Claude Code} as a daily tool rather than a novelty. Looking for a product-engineering role where judgment on what to build carries as much weight as how it gets built.}
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {StejasSYS}{Chennai, India (remote)}
+      {Software Engineer (Full-time)}{Jan 2025 -- Present.}
+      \resumeItemListStart
+        \resumeItem{Built the conversation orchestration core, RAG-based knowledge retrieval (\textbf{LangChain}/\textbf{LangGraph} with pgvector hybrid search), and admin API for \textbf{Innkraft's AI hotel sales agent}, a WhatsApp/Telegram booking assistant serving ~5 hotel clients; built a 60+ script regression-eval framework as the system's primary conversation-quality safety net, with Langfuse instrumentation across the pipeline.}
+        \resumeItem{Architected and built the \textbf{NestJS} backend for \textbf{Zion Taxi}, a live production ride-hailing platform (300+ drivers, ~100 rides/month), owning module boundaries, the fare-pricing engine, RBAC, and Razorpay payment integration end-to-end, plus its React 19 admin dashboard.}
+        \resumeItem{Designed the platform's multi-tenant RBAC foundation using Better Auth's organization plugin with custom permission statements, layering in WebAuthn device-carry and PII-masking interceptors for a security-hardened access layer.}
+        \resumeItem{Wrote and maintain a \textbf{~3,700-test} Jest suite (231 backend + 57 frontend spec files) covering payments, RBAC, fare pricing, and realtime Socket.io gateways.}
+        \resumeItem{Own the company's cloud infrastructure end-to-end: GCP IAM policies, load balancers, CDNs, Docker/Docker Compose, Nginx, and GitHub Actions CI/CD across the company's product lines.}
+        \resumeItem{\textbf{Stack:} NestJS, TypeScript, LangChain, LangGraph, pgvector, Langfuse, Better Auth, Drizzle ORM, PostgreSQL, Jest, Razorpay, RBAC/WebAuthn, Socket.io, React 19, Next.js, Docker, GCP, GitHub Actions.}
+      \resumeItemListEnd
+
+      \resumeSubSubheading
+        {Software Developer (Part-time)}{Jul 2024 -- Dec 2024.}
+      \resumeItemListStart
+        \resumeItem{Built full-stack features using Next.js, TypeScript, Tailwind CSS, and Payload CMS, leading the transition from low-code tooling to custom-built solutions.}
+        \resumeItem{Implemented SSG with on-demand ISR and CMS webhook integrations for seamless content sync between Payload and the frontend.}
+        \resumeItem{\textbf{Stack:} Next.js, TypeScript, Tailwind CSS, Payload CMS, Docker, GCP.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Flookup Capital Advisors (One21.ai)}{Mumbai, India (remote)}
+      {Contract Software Engineer}{Sep 2023 -- Present.}
+      \resumeItemListStart
+        \resumeItem{Delivered custom production web apps for finance \& tech clients under the One21.ai product umbrella, including \href{https://cagpt.in}{\underline{CAGPT}}, an AI-powered platform delivering finance, taxation, and compliance guidance for accounting professionals.}
+        \resumeItem{Led the transition from no-code tooling to custom Next.js deployments on Vercel, meaningfully cutting recurring hosting costs, and developed backend solutions on AWS and Supabase (load balancers, S3, CloudFront CDN).}
+        \resumeItem{\textbf{Stack:} Next.js, TypeScript, Sanity, AWS, Supabase, Vercel.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {LingoScriptAI}{Chennai, India (remote)}
+      {Product Development Engineer}{Jul 2023 -- Mar 2024.}
+      \resumeItemListStart
+        \resumeItem{Led development on a content-creation tool through the full Agile cycle, from research and development through deployment, using TypeScript, Next.js, Node.js, and Express.js.}
+        \resumeItem{Implemented \textbf{FFMPEG} for core product functionality, including server-side video rendering, and shipped on AWS S3/EC2.}
+        \resumeItem{\textbf{Stack:} TypeScript, Next.js, Node.js, Express.js, FFMPEG, Auth0, AWS.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Community Knowledge Weaver} $|$ \emph{IBM watsonx Orchestrate, MCP, TypeScript}}{Jan 2026.}
+          \resumeItemListStart
+            \resumeItem{Built an agentic AI assistant unifying scattered organizational knowledge into one chat interface on IBM watsonx Orchestrate, with a multi-agent orchestrator routing questions to specialist agents that can both answer and take action via MCP tools.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{9wealth} $|$ \emph{React Native, NestJS, Prisma, Supabase, OpenAI API}}{Sep 2025 -- Present.}
+          \resumeItemListStart
+            \resumeItem{Building a personal finance app with an AI chat interface for spending/investment insights (OpenAI API), across a React Native/Expo frontend and a NestJS/Prisma/Supabase backend, with infrastructure owned end-to-end.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Kumar Srivathsan: Portfolio Site} $|$ \emph{Next.js 16, TypeScript, shadcn/ui}}{Mar 2026.}
+          \resumeItemListStart
+            \resumeItem{Built and shipped a personal portfolio site end-to-end using Next.js 16 and shadcn/ui components, live at \href{https://kumarsrivathsan.com}{\underline{kumarsrivathsan.com}}.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {B.Tech, Electronics \& Communication Engineering}{Sep 2020 -- May 2025.}
+      {SRM Institute of Science and Technology}{CGPA: 8.65.}
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript (ES6+), Python, SQL, Bash/Shell} \\
+     \textbf{Frontend}{: React.js, Next.js (App Router, SSG, ISR, on-demand revalidation), Tailwind CSS, TanStack Query, Zustand, Redux, React Hook Form, Zod} \\
+     \textbf{Backend}{: Node.js, Express.js, NestJS, REST API design \& architecture, Socket.io (realtime/WebSockets), Drizzle ORM, Prisma ORM} \\
+     \textbf{AI/Agent Systems}{: LangChain, LangGraph (stateful agent orchestration), Retrieval-Augmented Generation (RAG) with pgvector, Langfuse (LLM observability/tracing), MCP (Model Context Protocol), OpenAI API, agentic assistant design} \\
+     \textbf{Auth \& Security}{: Better Auth (multi-tenant RBAC via organization/admin plugins), RBAC (permission grants, audit-actor coverage), WebAuthn, OAuth, Auth0, PII masking/data protection} \\
+     \textbf{Testing}{: Jest, ts-jest, Supertest, unit testing, test-driven development on service/business logic} \\
+     \textbf{Cloud \& Infrastructure}{: Google Cloud Platform (IAM, load balancers, CDN, Compute Engine, secret management), Docker \& Docker Compose, Nginx, AWS (S3, EC2, CloudFront), GitHub Actions (CI/CD), Redis} \\
+     \textbf{Databases}{: PostgreSQL (Drizzle/Prisma/Supabase), MongoDB, MySQL} \\
+     \textbf{Collaboration \& Communication}{: Cross-functional coordination (engineering and operations), developer mentorship, technical documentation (code-level, onboarding, business-facing), stakeholder communication}
+    }}
+ \end{itemize}
+
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Claude Code 101}: Anthropic Academy, Aug 2026. \\
+     \textbf{Claude 101}: Anthropic Academy, Aug 2026. \\
+     \textbf{Postman API Fundamentals Student Expert}: Postman, Dec 2022.
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
